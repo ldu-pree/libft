@@ -6,14 +6,13 @@
 /*   By: ldu-pree <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:58:09 by ldu-pree          #+#    #+#             */
-/*   Updated: 2019/05/21 11:59:02 by ldu-pree         ###   ########.fr       */
+/*   Updated: 2019/05/21 12:42:57 by ldu-pree         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int		ft_putchar(char c)
+void	ft_putchar(char c)
 {
 	write(1, &c, 1);
-	return (0);
 }
