@@ -6,7 +6,7 @@
 /*   By: ldu-pree <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 17:08:49 by ldu-pree          #+#    #+#             */
-/*   Updated: 2019/05/23 17:16:46 by ldu-pree         ###   ########.fr       */
+/*   Updated: 2019/05/23 18:08:13 by ldu-pree         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memcpy(void *s1, const void *s2, size_t n)
 	size_t	i;
 
 	i = 0;
-	while ((s1[i] !=  || s2[i] || i < n)
+	while (i < n)
 	{
 		((char*)s1)[i] = ((char*)s2)[i];
 		i++;
