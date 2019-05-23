@@ -1,18 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldu-pree <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 12:26:48 by ldu-pree          #+#    #+#             */
-/*   Updated: 2019/05/23 16:46:32 by ldu-pree         ###   ########.fr       */
+/*   Created: 2019/05/23 12:28:31 by ldu-pree          #+#    #+#             */
+/*   Updated: 2019/05/23 16:47:34 by ldu-pree         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isalpha(char c)
+#include <stdio.h>
+char	*ft_strcat(char *s1, const char *s2)
 {
-	if (((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z')))
-		return (1);
-	return (0);
+	int	i;
+	int	s1_end;
+
+	i = 0;
+	while (s1[i])
+		i++;
+	s1_end = i;
+	while (s2[i - s1_end])
+	{
+		s1[i] = s2[i - s1_end];
+		i++;
+	}
+	s1[i] = '\0';
+	return (s1);
 }

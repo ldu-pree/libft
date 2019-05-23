@@ -6,11 +6,11 @@
 /*   By: ldu-pree <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 10:47:31 by ldu-pree          #+#    #+#             */
-/*   Updated: 2019/05/22 10:55:53 by ldu-pree         ###   ########.fr       */
+/*   Updated: 2019/05/23 12:50:21 by ldu-pree         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(char *str)
+int		ft_strlen(const char *str)
 {
 	int l;
 

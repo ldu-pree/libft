@@ -228,6 +228,56 @@ int main()
   printf("\n\n");
   //
   //
+  //strcat
+  c = 0;
+  printf("\n\n");
+  while (c <= 4)
+  {
+    printf("--==+==--");
+    c++;
+  }
+  c = 0;
+  printf("\n");
+  printf("		    strcat\n");
+  printf("It Will Print (Hello World) If It Works\n");
+  char src[50], dest[50];
+
+   strcpy(src,  "This is source");
+   strcpy(dest, "This is destination");
+
+   ft_strcat(dest, src);
+
+  printf("Final destination string : |%s|", dest);
+  //printf("%s\n",ft_strcat(test1, test2));
+  while (c <= 4)
+  {
+    printf("--==+==--");
+    c++;
+  }
+  printf("\n\n");
+  //
+  //
+  //strncat
+  c = 0;
+  printf("\n\n");
+  while (c <= 4)
+  {
+    printf("--==+==--");
+    c++;
+  }
+  c = 0;
+  printf("\n");
+  printf("		    strncat\n");
+  printf("It Will Print (Hello Wo) If It Works\n");
+  printf("%s\n",strncat("Hello", " World", 3));
+  while (c <= 4)
+  {
+    printf("--==+==--");
+    c++;
+  }
+  printf("\n\n");
+  //
+  //
   //clean
   printf("||||||||\n");
   printf("VVVVVVVV");

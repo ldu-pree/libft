@@ -2,6 +2,7 @@ NAME = libft.a
 
 SRC = ft_atoi.c ft_isupper.c ft_putchar.c ft_putnbr.c ft_putstr.c ft_isalpha.c \
 	 ft_islower.c ft_isdigit.c ft_isprint.c ft_toupper.c ft_strlen.c ft_memalloc.c ft_memset.c ft_strdup.c \
+	 ft_strcat.c ft_strncat.c ft_bzero.c ft_memcpy.c
 
 
 all :
@@ -25,4 +26,5 @@ mhlem: all
 test:
 		norminette $(SRC)
 		gcc $(SRC) main.c -Wall -Wextra -Werror -o test
+		./test
 		rm test
