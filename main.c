@@ -10,14 +10,14 @@ int main()
   //test variables
   char *alpha = "abcdefghijklmnopqrstuvwxyz";
   char *num = "6";
-  char *alphnum = "!@#$%^&*()";
+  //char *alphnum = "!@#$%^&*()";
   char *errprint = "\n";
   char *canprint = "1a/.12Rgs";
-  char *strvar1 = "klol";
-  char *strtest1 = "lol";
-  char *strvar2 = "kloloktestvars";
-  char *strtest2 = "test";
-  char *ret;
+  //char *strvar1 = "klol";
+  //char *strtest1 = "lol";
+  //char *strvar2 = "kloloktestvars";
+  //char *strtest2 = "test";
+  //char *ret;
   //
   //
   //Title
@@ -199,6 +199,27 @@ int main()
   printf("		   isdigit\n");
   printf("It Will Return 1 If 6 Is A Digit Else 0\n");
   printf("%d\n",ft_isdigit(6));
+  while (c <= 4)
+  {
+    printf("--==+==--");
+    c++;
+  }
+  printf("\n\n");
+  //
+  //
+  //strdup
+  c = 0;
+  printf("\n\n");
+  while (c <= 4)
+  {
+    printf("--==+==--");
+    c++;
+  }
+  c = 0;
+  printf("\n");
+  printf("		    strdup\n");
+  printf("It Will Print (Hello World) If It Works\n");
+  printf("%s\n",ft_strdup("Hello World"));
   while (c <= 4)
   {
     printf("--==+==--");
