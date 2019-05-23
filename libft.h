@@ -12,4 +12,6 @@
   int ft_toupper(int c);
   int ft_strlen(char *str);
   void ft_putnbr(int nb);
+  void *ft_memalloc(size_t size);
+  void *ft_memset(void *b, int c, size_t len);
 #endif /* _LIBFT_H_ */

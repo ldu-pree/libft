@@ -1,7 +1,7 @@
 NAME = libft.a
 
 SRC = ft_atoi.c ft_isupper.c ft_putchar.c ft_putnbr.c ft_putstr.c ft_isalpha.c \
-	 ft_islower.c ft_isdigit.c ft_isprint.c ft_toupper.c ft_strlen.c
+	 ft_islower.c ft_isdigit.c ft_isprint.c ft_toupper.c ft_strlen.c ft_memalloc.c ft_memset.c
 
 all :
 		gcc -c $(SRC) -Wextra -Werror -Wall -I .
