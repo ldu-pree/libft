@@ -6,7 +6,7 @@
 /*   By: ldu-pree <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:46:33 by ldu-pree          #+#    #+#             */
-/*   Updated: 2019/05/24 07:24:12 by ldu-pree         ###   ########.fr       */
+/*   Updated: 2019/05/27 09:44:53 by ldu-pree         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,4 @@ int		ft_atoi(const char *str)
 		i++;
 	}
 	return (num * neg);
-}
-int main(void){
-	
-	printf("%d\n", ft_atoi("  "));
-	return (0);
 }
