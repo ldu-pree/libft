@@ -6,12 +6,12 @@
 /*   By: ldu-pree <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:46:33 by ldu-pree          #+#    #+#             */
-/*   Updated: 2019/05/27 09:44:53 by ldu-pree         ###   ########.fr       */
+/*   Updated: 2019/05/27 10:03:30 by ldu-pree         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+
 int		ft_atoi(const char *str)
 {
 	int neg;
