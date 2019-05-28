@@ -6,11 +6,12 @@
 /*   By: ldu-pree <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 12:28:31 by ldu-pree          #+#    #+#             */
-/*   Updated: 2019/05/23 16:47:34 by ldu-pree         ###   ########.fr       */
+/*   Updated: 2019/05/28 10:56:39 by ldu-pree         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+
 char	*ft_strcat(char *s1, const char *s2)
 {
 	int	i;

@@ -23,7 +23,11 @@ SRC = ft_atoi.c \
 	  ft_memchr.c \
 	  ft_memcmp.c \
 	  ft_strcpy.c \
-	  ft_strncpy.c
+	  ft_strncpy.c \
+	  ft_strlcpy.c \
+	  ft_strlcat.c \
+	  ft_strchr.c \
+	  ft_strrchr.c 
 
 
 all :
@@ -46,6 +50,3 @@ mhlem: all
 
 test:
 		norminette $(SRC)
-		gcc $(SRC) main.c -Wall -Wextra -Werror -o test
-		./test
-		rm test

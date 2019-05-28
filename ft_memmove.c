@@ -6,7 +6,7 @@
 /*   By: ldu-pree <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 11:10:37 by ldu-pree          #+#    #+#             */
-/*   Updated: 2019/05/27 12:08:41 by ldu-pree         ###   ########.fr       */
+/*   Updated: 2019/05/28 10:57:57 by ldu-pree         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		while (i < len)
 		{
 			if (dst == '\0' && src == '\0')
-				break;
+				break ;
 			((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
 			i += 1;
 		}
