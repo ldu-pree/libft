@@ -1,33 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldu-pree <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 10:48:22 by ldu-pree          #+#    #+#             */
-/*   Updated: 2019/05/30 11:58:06 by ldu-pree         ###   ########.fr       */
+/*   Created: 2019/05/30 11:58:21 by ldu-pree          #+#    #+#             */
+/*   Updated: 2019/05/30 12:07:48 by ldu-pree         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(char *src)
+char	*ft_strstr(char *str, char *to_find)
 {
-	int		i;
-	char	*str;
-	int 	size;
+	int i;
+	int j;
 
+	if (to_find[0] == '\0')
+		return (str);
 	i = 0;
-	size = 0;
-	while (src[size])
-		++size;
-	if (!(str = malloc(sizeof(char) * (size + 1))))
-		return (NULL);
-	while (i <= ft_strlen(src))
+	while (str[i] != '\0')
 	{
-		str[i] = src[i];
+		j = 0;
+		while (to_find[j] != '\0')
+		{
+			if (str[i + j] != to_find[j])
+				break ;
+			j++;
+		}
+		if (to_find[j] == '\0')
+			return (str + i);
 		i++;
 	}
-	return (str);
+	return (0);
 }

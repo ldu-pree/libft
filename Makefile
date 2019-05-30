@@ -27,7 +27,9 @@ SRC = ft_atoi.c \
 	  ft_strlcpy.c \
 	  ft_strlcat.c \
 	  ft_strchr.c \
-	  ft_strrchr.c 
+	  ft_strrchr.c \
+	  ft_strstr.c \
+	  ft_strnstr.c
 
 
 all :

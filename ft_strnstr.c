@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldu-pree <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 10:48:22 by ldu-pree          #+#    #+#             */
-/*   Updated: 2019/05/30 11:58:06 by ldu-pree         ###   ########.fr       */
+/*   Created: 2019/05/30 12:12:02 by ldu-pree          #+#    #+#             */
+/*   Updated: 2019/05/30 12:19:34 by ldu-pree         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(char *src)
+char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
-	int		i;
-	char	*str;
-	int 	size;
+	size_t	len2;
 
-	i = 0;
-	size = 0;
-	while (src[size])
-		++size;
-	if (!(str = malloc(sizeof(char) * (size + 1))))
-		return (NULL);
-	while (i <= ft_strlen(src))
+	if (*s2 == '\0')
+		return ((char *)s1);
+	len2 = ft_strlen(s2);
+	while (*s1 != '\0' && n-- >= len2)
 	{
-		str[i] = src[i];
-		i++;
+		if (*s1 == *s2 && ft_memcmp(s1, s2, len2) == 0)
+			return ((char *)s1);
+		s1++;
 	}
-	return (str);
+	return (NULL);
 }
