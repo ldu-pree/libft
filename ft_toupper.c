@@ -6,14 +6,14 @@
 /*   By: ldu-pree <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 12:57:48 by ldu-pree          #+#    #+#             */
-/*   Updated: 2019/05/21 17:01:34 by ldu-pree         ###   ########.fr       */
+/*   Updated: 2019/06/03 11:02:39 by ldu-pree         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_toupper(char c)
+int		ft_toupper(int c)
 {
-	if (c == 1)
-		return (0);
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
 	else
-		return (1);
+		return (c);
 }

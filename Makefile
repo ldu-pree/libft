@@ -29,7 +29,12 @@ SRC = ft_atoi.c \
 	  ft_strchr.c \
 	  ft_strrchr.c \
 	  ft_strstr.c \
-	  ft_strnstr.c
+	  ft_strnstr.c \
+	  ft_strcmp.c \
+	  ft_strncmp.c \
+	  ft_isalnum.c \
+	  ft_tolower.c \
+	  ft_isascii.c
 
 
 all :

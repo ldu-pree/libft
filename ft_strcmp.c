@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldu-pree <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 12:53:51 by ldu-pree          #+#    #+#             */
-/*   Updated: 2019/06/03 10:59:08 by ldu-pree         ###   ########.fr       */
+/*   Created: 2019/06/03 08:31:22 by ldu-pree          #+#    #+#             */
+/*   Updated: 2019/06/03 08:44:32 by ldu-pree         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
-int		ft_isprint(int c)
+int		ft_strcmp(const char *s1, const char *s2)
 {
-	return (c >= ' ' && c <= '~');
+	while (*s1 && *s1 == *s2)
+	{
+		s1++;
+		s2++;
+	}
+	return ((unsigned char)*s1 - (unsigned char)*s2);
 }

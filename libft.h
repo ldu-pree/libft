@@ -7,11 +7,14 @@
   int ft_atoi(const char *str);
   int ft_isupper(char *str);
   void ft_putchar(char c);
-  int ft_isalpha(char c);
-  int ft_islower(char c);
+  int ft_isalpha(int c);
+  int ft_isalnum(int c);
+  int ft_islower(int c);
   int ft_isdigit(int c);
-  int ft_isprint(char c);
+  int ft_isprint(int c);
   int ft_toupper(int c);
+  int ft_tolower(int c);
+  int ft_isascii(int c);
   int ft_strlen(const char *str);
   void ft_putnbr(int nb);
   void *ft_memalloc(size_t size);
@@ -33,4 +36,6 @@
   char *ft_strrchr(const char *s, int c);
   char *ft_strstr(char *str, char *to_find);
   char *ft_strnstr(const char *s1, const char *s2, size_t n);
+  int ft_strcmp(const char *s1, const char *s2);
+  int ft_strncmp(const char *s1, const char *s2, size_t n);
 #endif /* _LIBFT_H_ */

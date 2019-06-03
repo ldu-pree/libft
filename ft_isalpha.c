@@ -6,15 +6,15 @@
 /*   By: ldu-pree <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 12:26:48 by ldu-pree          #+#    #+#             */
-/*   Updated: 2019/05/24 09:24:01 by ldu-pree         ###   ########.fr       */
+/*   Updated: 2019/06/03 10:39:11 by ldu-pree         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isalpha(char c)
+int		ft_isalpha(int c)
 {
 	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-		return (c);
+		return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
 	return (0);
 }
