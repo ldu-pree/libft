@@ -35,7 +35,8 @@ SRC = ft_atoi.c \
 	  ft_isalnum.c \
 	  ft_tolower.c \
 	  ft_isascii.c \
-	  ft_memdel.c
+	  ft_memdel.c \
+	  ft_strnew.c \
 
 
 all :

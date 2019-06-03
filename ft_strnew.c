@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdel.c                                        :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldu-pree <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/03 11:23:05 by ldu-pree          #+#    #+#             */
-/*   Updated: 2019/06/03 16:06:45 by ldu-pree         ###   ########.fr       */
+/*   Created: 2019/06/03 16:13:56 by ldu-pree          #+#    #+#             */
+/*   Updated: 2019/06/03 18:12:05 by ldu-pree         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memdel(void **ap)
+char	*ft_strnew(size_t size)
 {
-	if (ap)
-	{
-		free(*ap);
-		*ap = NULL;
-	}
+	return (ft_memalloc((size + 1) * sizeof(char)));
 }

@@ -1,9 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ldu-pree <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/06/03 12:54:56 by ldu-pree          #+#    #+#             */
+/*   Updated: 2019/06/03 16:12:37 by ldu-pree         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#ifndef	_LIBFT_H_
-#define	_LIBFT_H_
-#include	<stdlib.h>
-#include	<string.h>
-#include	<unistd.h>
+#ifndef LIBFT_H
+# define LIBFT_H
+# include <stdlib.h>
+# include <string.h>
+# include <unistd.h>
 
 int		ft_atoi(const char *str);
 int		ft_isupper(char *str);
@@ -40,4 +51,6 @@ char	*ft_strstr(char *str, char *to_find);
 char	*ft_strnstr(const char *s1, const char *s2, size_t n);
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
-#endif /* _LIBFT_H_ */
+char	*ft_strnew(size_t size);
+
+#endif
