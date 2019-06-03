@@ -6,7 +6,7 @@
 /*   By: ldu-pree <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 10:48:22 by ldu-pree          #+#    #+#             */
-/*   Updated: 2019/05/30 11:58:06 by ldu-pree         ###   ########.fr       */
+/*   Updated: 2019/06/03 11:28:19 by ldu-pree         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strdup(char *src)
 {
 	int		i;
 	char	*str;
-	int 	size;
+	int		size;
 
 	i = 0;
 	size = 0;
