@@ -6,7 +6,7 @@
 /*   By: ldu-pree <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 12:54:56 by ldu-pree          #+#    #+#             */
-/*   Updated: 2019/06/03 16:12:37 by ldu-pree         ###   ########.fr       */
+/*   Updated: 2019/06/04 09:57:18 by ldu-pree         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,8 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n);
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnew(size_t size);
+void	ft_strdel(char **as);
+void	ft_strclr(char*s);
+void	ft_striter(char *s, void (*f)(char *));	
 
 #endif

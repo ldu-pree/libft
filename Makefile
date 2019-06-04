@@ -37,7 +37,9 @@ SRC = ft_atoi.c \
 	  ft_isascii.c \
 	  ft_memdel.c \
 	  ft_strnew.c \
-
+	  ft_strdel.c \
+	  ft_strclr.c \
+	  ft_striter.c \
 
 all :
 		gcc -c $(SRC) -Wextra -Werror -Wall -I .
