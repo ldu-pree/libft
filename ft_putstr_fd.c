@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_uppercase.c                                  :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldu-pree <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 12:56:04 by ldu-pree          #+#    #+#             */
-/*   Updated: 2019/05/21 12:57:23 by ldu-pree         ###   ########.fr       */
+/*   Created: 2019/06/06 11:06:51 by ldu-pree          #+#    #+#             */
+/*   Updated: 2019/06/06 11:06:53 by ldu-pree         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_str_is_uppercase(char *str)
+#include "libft.h"
+
+void	ft_putstr_fd(char const *s, int fd)
 {
-	if (!*str)
-		return(1);
-	while (*str)
-	{
-		if(!(*str >='A' && *str <= 'Z'))
-			return(0);
-		str++;
-	}
+	while (s && *s)
+		ft_putchar_fd(*s++, fd);
 }

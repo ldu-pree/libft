@@ -1,33 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldu-pree <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 10:48:22 by ldu-pree          #+#    #+#             */
-/*   Updated: 2019/06/06 11:23:25 by ldu-pree         ###   ########.fr       */
+/*   Created: 2019/06/06 10:49:49 by ldu-pree          #+#    #+#             */
+/*   Updated: 2019/06/06 10:51:18 by ldu-pree         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(char *src)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
+	char	*new_str;
 	size_t	i;
-	char	*str;
-	int		size;
+	size_t	j;
+	size_t	s1_len;
+	size_t	s2_len;
 
-	i = 0;
-	size = 0;
-	while (src[size])
-		++size;
-	if (!(str = malloc(sizeof(char) * (size + 1))))
+	if (!s1 || !s2)
 		return (NULL);
-	while (i <= ft_strlen(src))
-	{
-		str[i] = src[i];
-		i++;
-	}
-	return (str);
+	s1_len = ft_strlen(s1);
+	s2_len = ft_strlen(s2);
+	new_str = ft_strnew(s1_len + s2_len);
+	if (!new_str)
+		return (NULL);
+	i = -1;
+	j = -1;
+	while (++i < s1_len)
+		*(new_str + i) = *(s1 + i);
+	while (++j < s2_len)
+		*(new_str + i++) = *(s2 + j);
+	return (new_str);
 }

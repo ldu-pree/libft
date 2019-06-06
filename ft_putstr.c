@@ -6,13 +6,13 @@
 /*   By: ldu-pree <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 12:24:59 by ldu-pree          #+#    #+#             */
-/*   Updated: 2019/05/21 16:21:55 by ldu-pree         ###   ########.fr       */
+/*   Updated: 2019/06/06 11:21:13 by ldu-pree         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_pustr(char *str)
+void	ft_putstr(char const *str)
 {
 	while (*str != '\0')
 	{

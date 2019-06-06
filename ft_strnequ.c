@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldu-pree <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 11:58:09 by ldu-pree          #+#    #+#             */
-/*   Updated: 2019/05/21 12:42:57 by ldu-pree         ###   ########.fr       */
+/*   Created: 2019/06/06 10:48:41 by ldu-pree          #+#    #+#             */
+/*   Updated: 2019/06/06 10:49:08 by ldu-pree         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-void	ft_putchar(char c)
+int	ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	write(1, &c, 1);
+	if (!s1 || !s2)
+		return (0);
+	return (ft_strncmp(s1, s2, n) ? 0 : 1);
 }

@@ -1,38 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   atoi.c                                             :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldu-pree <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 11:46:33 by ldu-pree          #+#    #+#             */
-/*   Updated: 2019/05/21 11:51:47 by ldu-pree         ###   ########.fr       */
+/*   Created: 2019/06/06 11:05:26 by ldu-pree          #+#    #+#             */
+/*   Updated: 2019/06/06 11:05:28 by ldu-pree         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_atoi(char**str)
-{
-	int	numb;
-	int	is_neg;
+#include "libft.h"
 
-	numb = 0;
-	is_neg;
-	while (*str < 33)
-		str++;
-	if (*str == '-')
-	{
-		is_neg == 1;
-		str++;
-	}
-	if (*str == '+')
-		str++;
-		str++;
-	while (*str >= '0' && *str <= '9' && *str != '\0')
-	{
-		numb = numb * 10 + *str - '0';
-		str++;
-	}
-	if (is_negative)
-		return (-numb);
-	return (numb);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+{
+	char	*new_str;
+	int		i;
+
+	if (!s)
+		return (NULL);
+	new_str = ft_strnew(ft_strlen(s));
+	if (!new_str)
+		return (NULL);
+	i = -1;
+	while (*(s + ++i))
+		*(new_str + i) = f(i, *(s + i));
+	return (new_str);
 }

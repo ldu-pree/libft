@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldu-pree <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 12:26:48 by ldu-pree          #+#    #+#             */
-/*   Updated: 2019/05/21 12:28:26 by ldu-pree         ###   ########.fr       */
+/*   Created: 2019/06/06 10:51:39 by ldu-pree          #+#    #+#             */
+/*   Updated: 2019/06/06 10:51:41 by ldu-pree         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-nt		ft_is_alpha(char *str)
+#include "libft.h"
+
+char	*ft_strmap(char const *s, char (*f)(char))
 {
-	if (!*str)
-		return(1);
-	while (*str)
-	{
-		if (!((*str >= 'A' && *str <= 'Z') || (*str >= 'a' && *str <='z')))
-			return(0);
-		str++;
-	}
+	char	*new_str;
+	int		i;
+
+	if (!s)
+		return (NULL);
+	new_str = ft_strnew(ft_strlen(s));
+	if (!new_str)
+		return (NULL);
+	i = -1;
+	while (*(s + ++i))
+		*(new_str + i) = f(*(s + i));
+	return (new_str);
 }

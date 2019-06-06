@@ -1,33 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldu-pree <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 10:48:22 by ldu-pree          #+#    #+#             */
-/*   Updated: 2019/06/06 11:23:25 by ldu-pree         ###   ########.fr       */
+/*   Created: 2019/06/06 11:11:33 by ldu-pree          #+#    #+#             */
+/*   Updated: 2019/06/06 11:11:35 by ldu-pree         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(char *src)
+char		*ft_strtrim(char const *s)
 {
-	size_t	i;
-	char	*str;
-	int		size;
+	int		i;
+	int		start;
+	int		end;
+	char	*ptr;
 
-	i = 0;
-	size = 0;
-	while (src[size])
-		++size;
-	if (!(str = malloc(sizeof(char) * (size + 1))))
+	start = 0;
+	end = ft_strlen(s) - 1;
+	while (s[start] == ' ' || s[start] == '\t' || s[start] == '\n')
+		start++;
+	if (s[start] == '\0')
+		return ("");
+	while (s[end] == ' ' || s[end] == '\t' || s[end] == '\n')
+		end--;
+	ptr = malloc(end - start + 2);
+	if (!ptr)
 		return (NULL);
-	while (i <= ft_strlen(src))
+	i = start;
+	while (i <= end)
 	{
-		str[i] = src[i];
+		ptr[i - start] = s[i];
 		i++;
 	}
-	return (str);
+	ptr[i - start] = '\0';
+	return (ptr);
 }

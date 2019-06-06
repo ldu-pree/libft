@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldu-pree <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 12:28:52 by ldu-pree          #+#    #+#             */
-/*   Updated: 2019/05/21 12:39:25 by ldu-pree         ###   ########.fr       */
+/*   Created: 2019/06/06 11:05:55 by ldu-pree          #+#    #+#             */
+/*   Updated: 2019/06/06 11:05:56 by ldu-pree         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-nt		f_str_is_lowercase(char *str)
+#include "libft.h"
+
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	if (!*str)
-		return(1);
-	while (*str)
-	{
-		If (!(*str
-	}
+	char	*new_str;
+	size_t	i;
+
+	if (!s)
+		return (NULL);
+	new_str = ft_strnew(len);
+	if (!new_str)
+		return (NULL);
+	i = 0;
+	while (i < len)
+		*(new_str + i++) = *(s + start++);
+	return (new_str);
 }

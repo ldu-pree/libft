@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldu-pree <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 12:24:59 by ldu-pree          #+#    #+#             */
-/*   Updated: 2019/05/21 12:26:26 by ldu-pree         ###   ########.fr       */
+/*   Created: 2019/06/06 11:06:36 by ldu-pree          #+#    #+#             */
+/*   Updated: 2019/06/06 11:06:38 by ldu-pree         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_putchar(char c);
+#include "libft.h"
 
-void	ft_pustr(char *str)
+void	ft_putchar_fd(char c, int fd)
 {
-	while (*str != '\0')
-	{
-		ft_putchar(*str);
-		str++;
-	}
+	write(fd, &c, 1);
 }
