@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_count_word.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldu-pree <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 17:05:41 by ldu-pree          #+#    #+#             */
-/*   Updated: 2019/06/18 09:37:02 by ldu-pree         ###   ########.fr       */
+/*   Created: 2019/06/18 09:41:22 by ldu-pree          #+#    #+#             */
+/*   Updated: 2019/06/18 09:41:47 by ldu-pree         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+int		ft_count_word(char const *s, char c)
 {
-	size_t	i;
+	int	count;
+	int	i;
 
 	i = 0;
-	while (i < n)
+	count = 0;
+	while (s[i])
 	{
-		((char *)s)[i] = 0;
-		i++;
+		while (s[i] == c)
+			i++;
+		if (s[i] != c && s[i] != '\0')
+			count++;
+		while (s[i] != c && s[i] != '\0')
+			i++;
 	}
+	return (count);
 }

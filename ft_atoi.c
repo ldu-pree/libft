@@ -6,7 +6,7 @@
 /*   By: ldu-pree <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 11:46:33 by ldu-pree          #+#    #+#             */
-/*   Updated: 2019/06/03 11:27:45 by ldu-pree         ###   ########.fr       */
+/*   Updated: 2019/06/18 09:17:06 by ldu-pree         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,22 @@
 
 int		ft_atoi(const char *str)
 {
-	int neg;
-	int num;
-	int i;
+	int	i;
+	int	num;
+	int	sign;
 
 	i = 0;
-	neg = 1;
 	num = 0;
-	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\f'
-			|| str[i] == '\v' || str[i] == '\r' || str[i] == '\t')
+	sign = 1;
+	while (*(str + i) == '\n' || *(str + i) == '\t' ||
+			*(str + i) == '\r' || *(str + i) == '\v' ||
+			*(str + i) == '\f' || *(str + i) == ' ')
 		i++;
-	if (str[i] == '-' || str[i] == '+')
-	{
-		if (str[i] == '-')
-		{
-			neg *= -1;
-		}
+	if (*(str + i) == '-')
+		sign = -1;
+	if (*(str + i) == '-' || *(str + i) == '+')
 		i++;
-	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		num = num * 10 + (str[i] - 48);
-		i++;
-	}
-	return (num * neg);
+	while (*(str + i) && *(str + i) >= '0' && *(str + i) <= '9')
+		num = num * 10 + (*(str + i++) - '0');
+	return (num * sign);
 }

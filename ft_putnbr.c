@@ -6,24 +6,13 @@
 /*   By: ldu-pree <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 12:01:02 by ldu-pree          #+#    #+#             */
-/*   Updated: 2019/05/23 10:42:05 by ldu-pree         ###   ########.fr       */
+/*   Updated: 2019/06/18 09:49:16 by ldu-pree         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr(int nb)
+void	ft_putnbr(int nbr)
 {
-	if (nb < 0)
-	{
-		nb *= -1;
-		ft_putchar('-');
-	}
-	if (nb >= 10)
-	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
-	}
-	else
-		ft_putchar(nb + '0');
+	ft_putnbr_fd(nbr, 1);
 }

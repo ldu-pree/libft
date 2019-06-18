@@ -1,40 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldu-pree <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/06 11:05:43 by ldu-pree          #+#    #+#             */
-/*   Updated: 2019/06/18 11:41:29 by ldu-pree         ###   ########.fr       */
+/*   Created: 2019/06/18 10:54:18 by ldu-pree          #+#    #+#             */
+/*   Updated: 2019/06/18 11:27:55 by ldu-pree         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_strsplit(char const *s, char c)
+t_list	*ft_lstnew(void const *content, size_t content_size)
 {
-	int		i;
-	int		j;
-	int		k;
-	char	**str2;
+	t_list	*list;
 
-	if (!s || !(str2 = (char **)malloc(sizeof(*str2) *
-		(ft_count_word(s, c) + 1))))
+	list = (t_list*)malloc(sizeof(t_list));
+	if (!(list = (t_list *)malloc(sizeof(*list))))
 		return (NULL);
-	i = -1;
-	j = 0;
-	while (++i < ft_count_word(s, c))
+	if (!content)
 	{
-		k = 0;
-		if (!(str2[i] = ft_strnew(ft_len_word(&s[j], c) + 1)))
-			str2[i] = NULL;
-		while (s[j] == c)
-			j++;
-		while (s[j] != c && s[j])
-			str2[i][k++] = s[j++];
-		str2[i][k] = '\0';
+		list->content = NULL;
+		list->content_size = 0;
 	}
-	str2[i] = 0;
-	return (str2);
+	else
+	{
+		if (!(list->content = malloc(content_size)))
+			return (NULL);
+		ft_memcpy(list->content, content, content_size);
+		list->content_size = content_size;
+	}
+	list->next = NULL;
+	return (list);
 }
