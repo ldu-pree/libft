@@ -28,7 +28,7 @@ size_t				ft_strlen(const char *str);
 void				ft_putnbr(int nb);
 void				*ft_memalloc(size_t size);
 void				*ft_memset(void *b, int c, size_t len);
-char				*ft_strdup(char *src);
+char				*ft_strdup(const char *src);
 char				*ft_strcat(char *s1, const char *s2);
 char				*ft_strncat(char *s1, const char *s2, size_t n);
 void				ft_bzero(void *s, size_t n);
