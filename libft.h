@@ -6,7 +6,7 @@
 /*   By: ldu-pree <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 12:54:56 by ldu-pree          #+#    #+#             */
-/*   Updated: 2019/06/18 11:52:14 by ldu-pree         ###   ########.fr       */
+/*   Updated: 2019/07/01 15:09:12 by ldu-pree         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,10 @@ int					ft_atoi(const char *str);
 int					ft_isupper(char *str);
 void				ft_putchar(char c);
 int					ft_islower(char c);
+int					ft_tolower(int c);
+int					ft_isascii(int c);
+int					ft_isalnum(int c);
+char				*ft_strncpy(char *dst, const char *src, size_t n);
 int					ft_isdigit(int c);
 int					ft_toupper(int c);
 size_t				ft_strlen(const char *str);
@@ -70,7 +74,7 @@ void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 char				*ft_itoa(int n);
 size_t				ft_get_str_len(int n);
-int					ft_is_whitespace(char c);
+int					ft_is_whitespace(int c);
 int					ft_count_word(char const *s, char c);
 char				*ft_strtrim(char const *s);
 int					ft_len_word(char const *str, char c);

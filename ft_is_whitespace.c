@@ -6,17 +6,16 @@
 /*   By: ldu-pree <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/18 09:11:21 by ldu-pree          #+#    #+#             */
-/*   Updated: 2019/06/18 09:35:39 by ldu-pree         ###   ########.fr       */
+/*   Updated: 2019/07/01 15:10:28 by ldu-pree         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_is_whitespace(char c)
+int	ft_is_whitespace(int c)
 {
-	if (c == '\n' || c == '\t' || c == '\r')
-		return (1);
-	if (c == '\v' || c == '\f' || c == ' ')
+	if (c == ' ' || c == '\n' || c == '\v' || c == '\f'
+		|| c == '\t' || c == '\r')
 		return (1);
 	else
 		return (0);

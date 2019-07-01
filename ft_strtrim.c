@@ -6,36 +6,43 @@
 /*   By: ldu-pree <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 11:11:33 by ldu-pree          #+#    #+#             */
-/*   Updated: 2019/06/06 11:11:35 by ldu-pree         ###   ########.fr       */
+/*   Updated: 2019/07/01 15:11:36 by ldu-pree         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static int	whitespacestart(char const *s)
+{
+	int c;
+
+	c = 0;
+	while (ft_is_whitespace(s[c]))
+		c++;
+	return (c);
+}
+
 char		*ft_strtrim(char const *s)
 {
+	char	*ns;
 	int		i;
-	int		start;
-	int		end;
-	char	*ptr;
+	int		l;
+	int		x;
 
-	start = 0;
-	end = ft_strlen(s) - 1;
-	while (s[start] == ' ' || s[start] == '\t' || s[start] == '\n')
-		start++;
-	if (s[start] == '\0')
-		return ("");
-	while (s[end] == ' ' || s[end] == '\t' || s[end] == '\n')
-		end--;
-	ptr = malloc(end - start + 2);
-	if (!ptr)
+	i = 0;
+	x = 0;
+	if (s == NULL)
 		return (NULL);
-	i = start;
-	while (i <= end)
-	{
-		ptr[i - start] = s[i];
-		i++;
-	}
-	ptr[i - start] = '\0';
-	return (ptr);
+	l = (int)ft_strlen(s) - 1;
+	i = whitespacestart(s);
+	if (s[i] == '\0')
+		return (ft_strdup(""));
+	while (ft_is_whitespace(s[l]))
+		l--;
+	if (!(ns = (char *)malloc(sizeof(char) * (l - i) + 2)))
+		return (NULL);
+	while (i <= l)
+		ns[x++] = s[i++];
+	ns[x] = '\0';
+	return (ns);
 }

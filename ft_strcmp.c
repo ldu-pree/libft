@@ -6,18 +6,28 @@
 /*   By: ldu-pree <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 08:31:22 by ldu-pree          #+#    #+#             */
-/*   Updated: 2019/06/03 08:44:32 by ldu-pree         ###   ########.fr       */
+/*   Updated: 2019/07/01 15:04:30 by ldu-pree         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-int		ft_strcmp(const char *s1, const char *s2)
+int	ft_strcmp(const char *s1, const char *s2)
 {
-	while (*s1 && *s1 == *s2)
+	int				i;
+	unsigned char	*c1;
+	unsigned char	*c2;
+
+	i = 0;
+	c1 = (unsigned char *)s1;
+	c2 = (unsigned char *)s2;
+	while (c1[i] != '\0' && c2[i] != '\0')
 	{
-		s1++;
-		s2++;
+		if (c1[i] > c2[i])
+			return (1);
+		else if (c1[i] < c2[i])
+			return (-1);
+		i++;
 	}
-	return ((unsigned char)*s1 - (unsigned char)*s2);
+	return (c1[i] - c2[i]);
 }
